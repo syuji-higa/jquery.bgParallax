@@ -19,21 +19,21 @@
 		}, option);
 
 		var $win  = $(window),
-			$self = $(this),
-			pos = $self.css('background-position'),
-			os = $self.offset().top,
-			osNextCheck = $self.next().size();
+		    $self = $(this),
+		    pos = $self.css('background-position'),
+		    os = $self.offset().top,
+		    osNextCheck = $self.next().size();
 
 		if(osNextCheck != 0){
 			var osNext = $self.next().offset().top;
 		}
 		else{
 			var h = $self.height(),
-				osNext = os + h;
+			    osNext = os + h;
 		}
 		if(pos){
 			var posArray = pos.split(' '),
-				posY = posArray[1].replace('px', '');
+			    posY = posArray[1].replace('px', '');
 		}
 		else{
 			var posY = $self.css('background-position-y').replace('px', '');
@@ -43,8 +43,8 @@
 			events
 		============================== */
 		$win.scroll(function(){
-			var y = $(this).scrollTop();
-			var winH = $win.height();
+			var y = $(this).scrollTop(),
+			    winH = $win.height();
 			if(pos){
 				if(y > os - winH && y < osNext){
 					$self.css('background-position', posArray[0] + parseInt(-y / o.sp + os / o.sp) + 'px');
