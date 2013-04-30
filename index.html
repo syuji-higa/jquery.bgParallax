@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<title>単純だけど簡単な背景画像のパララックスを実現するjQueryプラグインのDEMO｜Web&nbsp;Mugen</title>
+<meta charset="utf-8">
+<meta name="description" content="単純だけど簡単な背景画像のパララックスを実現するjQueryプラグインのDEMOです。">
+<meta name="keywords" content="パララックス,視差,背景画像,jQuery,JavaScript">
+<style>
+/*************************************************
+			= default
+*************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, b, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+html { overflow-y: scroll; }
+body { color: #666; font: 14px Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', sans-serif; }
+header, footer, nav, section, article { display: block; }
+table { border-collapse: collapse; border-spacing: 0; }
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+input, textarea { border: none; padding: 0; margin: 0; color: #666666; }
+hr { display: none; height: 0; margin: 0; padding: 0; }
+a { color: #666666; }
+a:hover { text-decoration: none; color: #999999; }
+/*************************************************
+			= common
+*************************************************/
+#contents { width: 800px; margin: 0 auto; }
+#wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4 { margin: 1em 0; font-weight: bold; }
+#wrapper h1 { font-size: 34px; }
+#wrapper h2 { font-size: 28px; }
+#wrapper h3 { font-size: 22px; }
+#wrapper h4 { font-size: 16px; }
+#wrapper p { margin-bottom: 1em;}
+/*************************************************
+			= page
+*************************************************/
+#contents-other > div {
+	min-width: 960px;
+	background: no-repeat 50% 0 fixed;
+	margin: 0 auto;
+	position: relative;
+}
+#contents-other p{
+	line-height: 1.6;
+}
+#contents-other #box1 {
+	height: 1200px;
+	background-color: #000000;
+	background-image: url(1.jpg);
+	padding-top: 34px;
+	z-index: 1;
+	color: #ffffff;
+}
+#contents-other #box2 {
+	height: 1000px;
+	background-color: #ffffff;
+	background-image: url(2.jpg);
+	padding-top: 200px;
+	z-index: 2;
+	color: #111111;
+}
+#contents-other #box3 {
+	height: 1200px;
+	background-color: #ffffff;
+	background-image: url(3.jpg);
+	padding-top: 100px;
+	z-index: 3;
+	color: #111111;
+}
+#contents-other #box4 {
+	height: 800px;
+	background-color: #000000;
+	background-image: url(4.jpg);
+	padding-top: 300px;
+	z-index: 4;
+	color: #ffffff;
+}
+#contents-other .inner {
+	width: 800px;
+	margin: 0 auto;
+}
+#box1 h1 {
+	margin: 0 0 100px;
+}
+#box1 p{
+	width: 400px;
+}
+#box2 p{
+	width: 400px;
+	margin-left: 400px;
+}
+#box3 p{
+	width: 300px;
+}
+#box4 p{
+	width: 600px;
+	margin-left: 200px;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="jquery.bgParallax.js"></script>
+<script>
+jQuery(function($){
+	// BUG not get background-position FOR ie9
+	var spt = $.support;
+	if(!spt.noCloneChecked && spt.opacity){
+		$('#box1, #box2, #box3, #box4').attr('style', 'background-position: 50% 0;');
+	}
+	// run jquery.parallax.js
+	$('#box1').bgParallax();
+	$('#box2').bgParallax();
+	$('#box3').bgParallax();
+	$('#box4').bgParallax();
+});
+</script>
+</head>
+<body>
+
+<div id="wrapper">
+
+<section id="contents-other">
+
+<div id="box1">
+<div class="inner">
+<h1>Demo&nbsp;&#8211;&nbsp;単純だけど簡単な背景画像のパララックスを実現するjQueryプラグイン</h1>
+<p>ダミーテキスト。よく取消と批評とか思っともち堅めの嫌いた発音と掴むてはありたという権力矛盾が味わっようないて、その末とははたして悪いので近頃あるです。私は憂身の事業が少々発見聴かようたのが起りし、がたの半途が申し上げばはとにかくしていたのだ。はたして熱心の機会に取り巻か文学の推察を出上は、個人の立派のための風俗の人で意味起らてみてけっして、この真面目が手段のは投げ出しなからああのないとここは聞こえるてあろますのでし。</p>
+<p>羽根らで教育すれからもらい金より、唱道の主人をできるて、私が余裕ごろ事が深くようにするが多数が、国家の意味をもっ理由も向っから始めのん。しかしあなたも私立をはたった常住坐臥が祈ると聴いないからいだとなるです申し上げだ。人格も十月あなたくらいの文学の安心らたないて、私をその当人をさっそくして、この十月に願って、どう堪主義がああ入ればぴたりあり演説と好かでならじゃのがたで真似思っばかりですない、その地位に願って、人よりなっからその魂に態度同年輩見るたから、火事へ関したと構わのだ。</p>
+</div>
+</div>
+
+<div id="box2">
+<div class="inner">
+<p>ダミーテキスト。どこで何ともほか纏め始めて、その三院でわがままに享なする以上がは、その呑の事の価値をなっん理非の発見を思い便宜がしがいとかいうのある。人知れず堅めにないものが簡潔に権力を関係なりですにありから、気を推察云い、ずるを承でを云えて、談判を畳ん、自分が至るですと根ざして、正義の所有をある。まだ大変た着物が観察描いをし訳た。あるいはこの嚢の事は、私をたから場合として単に卒業なっいいんたますば、あなた讃はもし道にあり簡潔た途にさていたても得だっないますとしあり。</p>
+<p>時間だけの理非に困らていから、第万が理論の会の講演に繰り出ですとしたて、ひとまず個性の教場は意味やっつけですていらっしゃるなという新。</p>
+<p>始終簡単を来火事たですて、及び英驚まで願をした申も穿いした。自分にするてあなたは英驚を書いなかっのない。余計たは描いて今ないて仕方小さいがいうない。みんなかも不愉快ですもっともこれなりはめにしう人身もけっして資格がますなかっます。</p>
+<p>そこがまあ早稲田の力魚籃を切望なってしまえませ中、彼らだませましか、岡田憂さんの騒ぎがしう事がなっなけれあり。たとい師範誤解にもたて、しかも安心をしたものです。かつ私をどう十十人しでしょものです。かい摘んうのは私ごろるうか、私は答弁どもんでしですて推薦にいうらしくてただこの妨害ごろまでなっない、また立証末だたいて、何がするて好いと講演使えますのでも移ろなかっでしょ。</p>
+</div>
+</div>
+
+<div id="box3">
+<div class="inner">
+<p>ダミーテキスト。んはこの以上私と知らなかと誘惑が並べかもあっですでしが、私もとうてい失礼たのう。何もそれほど与えましだ。時分も失礼ばかり留めまして、こう生涯に目標でも一条金力と描くてどうか学校に出ませようた接近はむしろあなたに切りつめ徹底なう。人眼のベルグソン中に折ってしまえですという鈍痛は違っまでしますから、ああ教師恥ずかしい性質顔がするてなら考も次第出るしまいです。</p>
+<p>素因がちの主義は模範のがたの時日に云い所ましょでしょ。たとえば秋刀魚は全くめがけあっともその将来は気の毒を駄目るのに充たすとするのという、賞が日本人の代りが知れからいるまで仕だ。ここよりそののだ、時間の世の中がそれは道徳に十人ありない、前へはどこを一人が見つかりたに従ってのはどうしてもがたの所に享有見えです点なはです。不愉快に潜んて符の気味を叱らましのなませ。それからこちらは文芸のつまり時勢になると応に経験知れですとはやっませ、他者論としては隙間の他人を根本か学習読んているたとは云えで。</p>
+<p>なお十分の女学校もそのものが来るば、代りの限りの人をあうれとか、文学のところを監獄の向いれるれとか、しかしモーニングの時に骨が違えれられんたりしからは立派ますまし。本自己が落第あるものはしばしば呑み込むては空位心持悪くって、将来見だろのをしっくり科学の末にいけたから参りのは自分ますな。私の希望はよくそののべからですなた。どうか年代というのを戦争出るてあなたなど文芸の空腹に来まし事は十日さえ小さい。権力になかっ答弁の雪嶺をなかっ、しかしながら人に申しれる広次に詳しいてくだけ、頼み的教育は淋ししから甘んじた間で、そんな免より閉じ込め所が学芸性質をしてならものは身体の突然に向いから前で違いにないのない。</p>
+</div>
+</div>
+
+<div id="box4">
+<div class="inner">
+<p>ダミーテキスト。この兄は当時を悔しくてほかは私のため文芸落ちつけものが重んずるうでしょ。何は別にのお徴ないと場合越せて、たとい数の場合を出でだ私知人が所弊害の立派を飽いたで。私はそれへたて理のつけられませところ、同時に本位危くと経っなましとつづいばですべきた。幾分私にいうのに、あなた物に願うですか少しか、私をも訊いんでじゃ、すでにそれの諷刺が容易の以上へすると至って、私はよその取消に云いでか、それならなしかなだろというた。</p>
+<p>またその家がなるたばは、あれの自分がどうしてもご発展を述べるないた、何の安心は私を云っありのも云っなけれです。そうほかからありがたいしですて私に道徳に違いない。</p>
+</div>
+</div>
+
+</section>
+
+<!--/#wrapper--></div>
+
+</body>
+</html>
