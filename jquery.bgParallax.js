@@ -5,7 +5,7 @@
  * @author    : syuji-higa
  * @copyright : Web Mugen (http://web-mugen.com/)
  * @license   : The MIT License
- * @link      : http://web-mugen.com/javascript/jquerybgparallax/
+ * @link      : http://web-mugen.com/javascript/jquery.bgParallax/
  * @modified  : 2013-04-30 17:05
  */
 
