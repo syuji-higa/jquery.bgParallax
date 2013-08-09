@@ -1,22 +1,22 @@
 /*!
  * jquery.bgParallax.js
  *
- * @version   : 1.0.0
+ * @version   : 1.0.1
  * @author    : syuji-higa
- * @copyright : Web Mugen (http://web-mugen.com/)
+ * @copyright : syuji-higa (https://github.com/syuji-higa)
  * @license   : The MIT License
- * @link      : http://web-mugen.com/javascript/jquery.bgParallax/
- * @modified  : 2013-04-30 17:05
+ * @link      : http://deom.syuji-higa.com/javascript/jquery.bgParallax/sample
+ * @modified  : 2013-08-10 21:00
  */
 
 (function($){
 
-	$.fn.bgParallax = function(option){
+	$.fn.bgParallax = function(options){
 
-		// option
+		// options
 		var o = $.extend({
 			sp: 5
-		}, option);
+		}, options);
 
 		var $win  = $(window),
 		    $self = $(this),
@@ -42,6 +42,7 @@
 		/* ==============================
 			events
 		============================== */
+
 		$win.scroll(function(){
 			var y = $(this).scrollTop(),
 			    winH = $win.height();
