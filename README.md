@@ -8,8 +8,8 @@
 ------
 ### html script ###
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src=""></script>
-	<script type="text/javascript">
+	<script src="jquery.bgParallax.js"></script>
+	<script>
 	$('#box1').bgParallax();
 	$('#box2').bgParallax();
 	$('#box3').bgParallax();
