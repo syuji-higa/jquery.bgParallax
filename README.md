@@ -7,7 +7,8 @@
 使い方
 ------
 ### html script ###
-パララックスさせる要素毎にプラグインを実行する。  
+パララックスさせる要素毎にプラグインを実行する。
+
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript">
 	$('#box1').bgParallax();
