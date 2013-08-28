@@ -23,58 +23,59 @@ a:hover { text-decoration: none; color: #999999; }
 /*************************************************
 			= common
 *************************************************/
-#contents { width: 800px; padding-top: 30px; margin: 0 auto; }
-#wrapper h1 { margin-bottom: 1em; font-weight: bold; font-size: 34px; }
-#wrapper h2, #wrapper h3, #wrapper h4 { margin: 1em 0; font-weight: bold; }
-#wrapper h2 { font-size: 28px; }
-#wrapper h3 { font-size: 22px; }
-#wrapper h4 { font-size: 16px; }
-#wrapper p { margin-bottom: 1em; }
+#wrap h1 { margin-bottom: 1em; font-weight: bold; font-size: 34px; }
+#wrap h2, #wrap h3, #wrap h4 { margin: 1em 0; font-weight: bold; }
+#wrap h2 { font-size: 28px; }
+#wrap h3 { font-size: 22px; }
+#wrap h4 { font-size: 16px; }
+#wrap p { margin-bottom: 1em; }
 /*************************************************
 			= page
 *************************************************/
-#contents-other > div {
+#box-wrap > div {
 	min-width: 960px;
-	background: no-repeat 50% 0 fixed;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-attachment: fixed;
 	margin: 0 auto;
 	position: relative;
 }
-#contents-other p{
+#box-wrap p{
 	line-height: 1.6;
 }
-#contents-other #box1 {
+#box1 {
 	height: 1200px;
-	background-color: #000000;
+	background-color: #000;
 	background-image: url(1.jpg);
 	padding-top: 34px;
 	z-index: 1;
-	color: #ffffff;
+	color: #fff;
 }
-#contents-other #box2 {
+#box2 {
 	height: 1000px;
-	background-color: #ffffff;
+	background-color: #fff;
 	background-image: url(2.jpg);
 	padding-top: 200px;
 	z-index: 2;
-	color: #111111;
+	color: #111;
 }
-#contents-other #box3 {
+#box3 {
 	height: 1200px;
-	background-color: #ffffff;
+	background-color: #fff;
 	background-image: url(3.jpg);
 	padding-top: 100px;
 	z-index: 3;
-	color: #111111;
+	color: #111;
 }
-#contents-other #box4 {
+#box4 {
 	height: 800px;
-	background-color: #000000;
+	background-color: #000;
 	background-image: url(4.jpg);
 	padding-top: 300px;
 	z-index: 4;
-	color: #ffffff;
+	color: #fff;
 }
-#contents-other .inner {
+#box-wrap .inner {
 	width: 800px;
 	margin: 0 auto;
 }
@@ -96,18 +97,13 @@ a:hover { text-decoration: none; color: #999999; }
 	margin-left: 200px;
 }
 </style>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <!--[if lte IE 8]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="../jquery.bgParallax.js"></script>
 <script>
 jQuery(function($){
-	// BUG not get background-position FOR ie9
-	var spt = $.support;
-	if(!spt.noCloneChecked && spt.opacity){
-		$('#box1, #box2, #box3, #box4').attr('style', 'background-position: 50% 0;');
-	}
 	// run jquery.parallax.js
 	$('#box1').bgParallax();
 	$('#box2').bgParallax();
@@ -118,9 +114,9 @@ jQuery(function($){
 </head>
 <body>
 
-<div id="wrapper">
+<div id="wrap">
 
-<section id="contents-other">
+<div id="box-wrap">
 
 <div id="box1">
 <div class="inner">
@@ -154,9 +150,9 @@ jQuery(function($){
 </div>
 </div>
 
-<!--/contents--></section>
+</div>
 
-<!--/#wrapper--></div>
+<!--/#wrap--></div>
 
 </body>
 </html>
