@@ -10,6 +10,7 @@
 1. jQueryを読み込む。
 2. jquery.bgParallax.jsを読み込む。
 3. パララックスさせる要素毎にプラグインを実行する。
+
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src=""></script>
 	<script type="text/javascript">
