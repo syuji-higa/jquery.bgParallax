@@ -1,17 +1,17 @@
-単純だけど簡単な背景画像のパララックスを実装するjQueryプラグイン
+単純だけど簡単な背景画像のパララックスを実装するjQueryプラグイン｜jquery.bgParallax
 ======================
-シンプルなモーダルウィンドウを制作しました。  
-有名なモーダルウィンドウに比べらたら出来ないことだらけです。
+スクロールで背景画像がズレるやつを制作しました。パララックスとか言うやつですね。まあコンテンツごとの背景がズレるだけなので、視差と呼べるかは微妙ですけれど、他のをみるとそう呼んでもいい感じですね。  
+とりあえずこのプラグインのウリはタイトル通り単純だけど簡単ってところです。パララックスする要素を指定するだけでOK。あとは動きの量を調整したければする位です。まあ、大したモノではありませんがチョット試してみようかなって思ってる方にはイイかもしれません。
 
 使い方
 ------
 ### html script ###
+パララックスさせる要素毎にプラグインを実行する。
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript">
 	$('#box1').bgParallax();
 	$('#box2').bgParallax();
 	$('#box3').bgParallax();
-	$('#box4').bgParallax();
 	</script>
 
 ### html body ###
@@ -19,7 +19,6 @@
 		<div id="box1"></div>
 		<div id="box2"></div>
 		<div id="box3"></div>
-		<div id="box4"></div>
 	</div>
 
 ### css ###
@@ -38,14 +37,10 @@
 		background-image: url(3.jpg);
 		z-index: 3;
 	}
-	#box4 {
-		background-image: url(4.jpg);
-		z-index: 4;
-	}
 
 パラメータ
 ----------------
-	def MyFunction(sp, param2, ...)
+	def MyFunction({sp})
 
 +  `sp` :  
 	_視差の量_ 数値が小さいほど視差が大きくなる（デフォルト：5）
